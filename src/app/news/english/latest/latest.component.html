@@ -1,0 +1,72 @@
+<mat-tab-group>
+
+  <mat-tab label="TOI">
+		<mat-grid-list cols="3" *ngFor="let news_row of toi | chunk:3">
+			<mat-grid-tile *ngFor="let item of news_row">
+				<mat-card class="example-card">
+					<mat-card-header>
+						<div mat-card-avatar class="example-header-image"></div>
+						<mat-card-title>{{item.Title}}</mat-card-title>
+					</mat-card-header>
+					<img mat-card-image [src]="item.ImgLink" alt="Photo of a Shiba Inu">
+				</mat-card>
+			</mat-grid-tile>
+		</mat-grid-list>
+  </mat-tab>
+
+  <mat-tab label="NDTV">
+		<div class="row" *ngFor="let news_row of ndtv | chunk:3">
+			<div class="col-sm-4" *ngFor="let item of news_row" >
+				<mat-card class="example-card">
+					<mat-card-header>
+						<div mat-card-avatar class="example-header-image"></div>
+						<mat-card-title>{{item.Title}}</mat-card-title>
+					</mat-card-header>
+					<img mat-card-image [src]="item.ImgLink" alt="Photo of a Shiba Inu">
+				</mat-card>
+			</div>
+		</div>
+  </mat-tab>
+
+  <mat-tab label="ZEE">
+		<div class="row" *ngFor="let news_row of zee | chunk:3">
+			<div class="col-sm-4" *ngFor="let item of news_row" >
+				<mat-card class="example-card">
+					<mat-card-header>
+						<div mat-card-avatar class="example-header-image"></div>
+						<mat-card-title>{{item.Title}}</mat-card-title>
+					</mat-card-header>
+					<img mat-card-image [src]="item.ImgLink" alt="Photo of a Shiba Inu">
+				</mat-card>
+			</div>
+		</div>
+  </mat-tab>
+
+  <mat-tab label="INTODAY">
+		<div class="row" *ngFor="let news_row of in_today | chunk:3">
+			<div class="col-sm-4" *ngFor="let item of news_row" >
+				<mat-card class="example-card">
+					<mat-card-header>
+						<div mat-card-avatar class="example-header-image"></div>
+						<mat-card-title>{{item.Title}}</mat-card-title>
+					</mat-card-header>
+					<img mat-card-image [src]="item.ImgLink" alt="Photo of a Shiba Inu">
+				</mat-card>
+			</div>
+		</div>
+  </mat-tab>
+
+  <mat-tab label="ONE INDIA">
+		<div class="row" *ngFor="let news_row of one_india | chunk:3">
+			<div class="col-sm-4" *ngFor="let item of news_row" >
+				<mat-card class="example-card">
+					<mat-card-header>
+						<div mat-card-avatar class="example-header-image"></div>
+						<mat-card-title>{{item.Title}}</mat-card-title>
+					</mat-card-header>
+					<img mat-card-image [src]="item.ImgLink" alt="Photo of a Shiba Inu">
+				</mat-card>
+			</div>
+		</div>
+  </mat-tab>
+</mat-tab-group>
